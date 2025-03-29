@@ -171,10 +171,10 @@ class ToDoList:
         btn_frame = ttk.Frame(frame)
         btn_frame.pack(side=tk.RIGHT)
         
-        if overdue:
-            del_btn = ttk.Button(btn_frame, text="删除", width=5, 
-                               command=lambda t=task: self.delete_task(t))
-            del_btn.pack(side=tk.RIGHT, padx=2)
+        
+        del_btn = ttk.Button(btn_frame, text="删除", width=5, 
+                            command=lambda t=task: self.delete_task(t))
+        del_btn.pack(side=tk.RIGHT, padx=2)
             
         done_btn = ttk.Button(btn_frame, text="完成", width=5,
                             command=lambda t=task, e=note_entry: self.mark_as_done(t, e))
